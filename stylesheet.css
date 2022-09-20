@@ -7,8 +7,8 @@ html{ font-size: 62.5%;
   body{
   width: 100%;
   height: 100%;
-    background-image: url("./gallery/alejandria_biblioteca.jpg");
-    background-color: antiquewhite;
+  background-image: url("./gallery/alejandria_biblioteca.jpg");
+  background-color: antiquewhite;
   }
   
   header h1 {
@@ -31,75 +31,158 @@ html{ font-size: 62.5%;
     
   }
   
-.loginButton{
-  width: 100%;
-  display: inline;
- 
-  
-
-}
+  .stickypropio{
+    background-color: rgba(0, 0, 0, 0.281);
+  }
 
   
 .barraDeNavegacion{
   width: 100%;
-  position: absolute;
  text-align: center;
   height: 25px;
   display: block;
   position: sticky;
-  margin: 5px;
+  margin: 15px 0px 15px 0px;
+}
+.laBarra{
+width: 300px;
+height: 35px;
 }
 
+.divFrase{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+}
 
 .fraseDelDia{
-  width: 100%; 
-  position: relative; 
+  width: 100%;
    font-family: 'aboreto',cursive;
     font-size: 2rem;
     text-align: center;
     color: #ffffff;
-    
+  
   }
+
   .menu{
-  width: 10%;
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  width: 160px;
   height: 80%;
-  top: 65px;
+  top: 99px;
   padding: 5px;
   border-style: solid;
   border-color: #9A031E;
   border-width: 2px;
-  position: absolute;
-  overflow: hidden;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
-  }
- 
-  .menu button {
- display: block; 
- width: 100%; 
- background-color: #00d9ff;
-  }
-
-.menu button:hover{
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-transition: 0.5s;
+  background-color: #f1f1f1;
 }
 
+.menuChico{
+  display:none;
+}
 
- 
+  
+  .menuTeatro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-evenly;
+  width: 160px;
+  height: 80%;
+  top: 99px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #9A031E;
+  border-width: 2px;
+  background-color: #f1f1f1;
+  }
+  
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
 
- 
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  }
+  .btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  .loginButton {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+.botonDeBuscar{
+  width: 20%px;
+    height: 22px;
+    line-height: 22px;
+}
+  
 
-
-
- 
- .principalHome {
+.principalHome {
+  margin-left: 10%;
+  margin-right: 10%;
   display:grid;
-  grid-template-columns: 1fr, 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-area: 
+  grid-template-areas: 
  
   " temporada temporada "
  
@@ -109,23 +192,20 @@ transition: 0.5s;
  
   column-gap: 5px;
   row-gap: 5px;
-  justify-content:stretch ;
-  justify-items:stretch;
-  align-items: stretch;
-  align-content: stretch;
-  
  
  }
 
+
  .temaDeTemporada{
-  display:block
- }
+  display: flex;
+  justify-content: center;
+  grid-area: temporada;
+}
 
 
-
-
- .noticiasCarrousel{
- display: row;
+.noticiasCarrousel{
+  display: flex;
+  justify-content: center;
   grid-area: noticiasC;
     font-family: 'aboreto',cursive;
     font-size: 2rem;
@@ -134,7 +214,8 @@ transition: 0.5s;
 }
 
  .nuevosCarrousel{
-  display:row;
+  display: flex;
+  justify-content: center;
   grid-area: nuevosC;
        font-family: 'aboreto',cursive;
       font-size: 2rem;
@@ -143,48 +224,43 @@ transition: 0.5s;
  }
 
  .subiTuObra{
-  display:inline-block;
+  display: flex;
+  justify-content: center;
   grid-area: subiTO ;
  
 
  }
 
 .unDiaComoHoy{
-  display:inline-block;
+  display: flex;
+  justify-content: center;
  grid-area: undia ;
- 
-
 }
  
  footer {
-  width: 100%;
-  bottom: 10px;
   font-family: 'aboreto',cursive;
   font-size: 1.5rem;
   text-align: left;
   color: #ffffff;
   outline: none;
   text-decoration: none;
-  display: block;
+  
   }
 
   /*html disclaimer*/
  
   .disclaimer{  
-    
     margin-right: 15px;
     margin-left: 20px;
     font-family: 'aboreto',cursive;
     font-size: 1.5rem;
     text-align: left;
-    position: absolute;
     color:#ffffff;
     outline: none;
    text-decoration: none;
-   display:inline-block;
     }
  
-    .disclaimerText{
+  .disclaimerText{
   width: 50%;
   height: 20%;
   padding-left: 25%;
@@ -197,6 +273,30 @@ transition: 0.5s;
  }
 
  /* html teatro*/ 
+
+.collapseMio{
+  display: flex;
+  margin-left: 10px;
+}
+.hamletbuton{
+  font-family: 'aboreto',cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #E36414;
+}
+.accordionMio{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  align-items: center;
+  justify-content:center;
+  width: 50%;
+  font-family: 'aboreto',cursive;
+  font-size: 2rem;
+  text-align: center;
+ 
+
+}
 
 .h3teatro{
   font-family: 'aboreto',cursive;
@@ -220,7 +320,7 @@ transition: 0.5s;
   font-family: 'aboreto',cursive;
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #ad0808;
   list-style-type: decimal;
   display: inline-block;
   padding-left: 50px;
@@ -239,7 +339,7 @@ transition: 0.5s;
    font-family: 'aboreto',cursive;
    font-size: 2rem;
    font-weight: 600;
-   color: #ffffff;
+   color: #ad0808;
    display: inline-block; 
    list-style-type: disc;
    padding-left: 50px;
@@ -248,7 +348,7 @@ transition: 0.5s;
 .puntaje li {
   font-size: 1.5rem;
   list-style-type: disc;
-  color: #8ECAE6;
+  color:  #FB8500;
   display: block;
 
 
@@ -258,7 +358,7 @@ transition: 0.5s;
   font-family: 'aboreto',cursive;
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #ad0808;
   list-style-type: upper-roman;
   display: inline-block;
   padding-left: 50px;
@@ -268,23 +368,40 @@ transition: 0.5s;
 .longitud li{
   font-size: 1.5rem;
   list-style-type: upper-roman;
-  color: #8ECAE6;
+  color: #FB8500;
   list-style-type: upper-roman;
   display: block;
 
 }
 
 .hamlet a{
+  text-align: left;
   font-family: 'aboreto',cursive;
   font-size: 1.7rem;
   font-weight: 600;
-  color: #00d9ff;
+  color:  #FB8500;
   display: block;
   padding-top: 30px;
   padding-left: 12.5%;
 }
 
 /*hamlet pdf*/
+
+.menuEnHamlet{  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  top: 110px;
+  width: 160px;
+  height: 45%;
+  padding: 5px;
+  border-style: solid;
+  border-color: #9A031E;
+  border-width: 2px;
+  background-color: #f1f1f1;
+
+}
 
 .tablaDeHamlet{
   display: flex;
@@ -322,5 +439,27 @@ transition: 0.5s;
 
 }
 
+.container{
+  margin-left: 15%;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .principalHome {
+    display: flex;
+    flex-direction: column;
 
+  } 
+.logo{
+font-size: 4rem;
+}
+.menu{
+  display:none;
 
+}
+.menuChico{
+display: flex;
+flex-direction: column;
+}
+
+}
